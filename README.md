@@ -9,7 +9,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |nickname|string|null: false, unique: true, add_index|
-|mail|string|null: false, unique: true|
+|email|string|null: false, unique: true|
 |password|string|null: false|
 ### Association
 - has_many :experts
