@@ -47,21 +47,25 @@ $member-color: #879aad;
         @include user_btn();
         @include main-font();
         // margin-left: 20px;
+        text-decoration: none;
       }
       .sign-out__btn {
         @include user_btn();
         @include main-font();
         margin-left: 20px;
+        text-decoration: none;
       }
       .sign-up__btn {
         @include user_btn();
         @include main-font();
         margin-left: 20px;
+        text-decoration: none;
       }
       .edit__btn {
         @include user_btn();
         @include main-font();
         margin-left: 20px;
+        text-decoration: none;
       }
     }
   }

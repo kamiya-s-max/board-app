@@ -4,14 +4,14 @@
       .header__title
         Board
     .header__right-box
-      .sign-in__btn
+      =link_to new_user_session_path, class: "sign-in__btn" do
         Sign In
-      .sign-up__btn
+      =link_to new_user_registration_path, class: "sign-up__btn" do
         Sign Up
-      .sign-out__btn
+      =link_to destroy_user_session_path, class: "sign-out__btn", method: :delete do
         Sign Out
-      .edit__btn
-        Edit
+      -# =lick_to edit_user_path(current_user), class: "edit__btn" do
+      -#   Edit
   .side_bar
     .contents
       .contents__title
