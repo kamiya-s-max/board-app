@@ -5,13 +5,13 @@
         Board
     .header__right-box
       =link_to new_user_session_path, class: "sign-in__btn" do
-        Sign In
+        Log In
       =link_to new_user_registration_path, class: "sign-up__btn" do
         Sign Up
       =link_to destroy_user_session_path, class: "sign-out__btn", method: :delete do
         Sign Out
-      -# =lick_to edit_user_path(current_user), class: "edit__btn" do
-      -#   Edit
+      -# =link_to edit_user_path(current_user), class: "edit__btn" do
+        Edit
   .side_bar
     .contents
       .contents__title
