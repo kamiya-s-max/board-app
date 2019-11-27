@@ -1,0 +1,59 @@
+.account-page {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  &__inner {
+    height: 100vh;
+    background-color: #b9c5d1;
+    .form_box {
+      height: 100%;
+      width:80%;
+      padding: 0 20px;
+      background-color: #ffffff;
+      margin: 0 auto;
+      .form__title {
+        // color: #ffffff71;
+        font-weight: bold;
+        color: #4c5765;
+        font-size: 30px;
+      }
+      .form {
+        padding: 20px;
+        // font-size: 15px;
+        text-align: center;
+        color: $main-color;
+        .label {
+          font-size: 20px;
+        }
+        .field {
+          height: 30px;
+          width:300px;
+          font-size: 20px;
+        }
+      }
+      .image__field {
+        // text-align: center;
+        margin: 0 auto;
+        width: 300px;
+        cursor: pointer;
+        border: solid 1px $member-color;
+        color: $main-color;
+      }
+      .submit {
+        margin: 20px;
+        text-align: center;
+        .actions {
+          .submit__btn {
+            height: 50px;
+            width: 300px;
+            line-height: 50px;
+            padding: 0 20px;
+            background-color: #4c5765;
+            color: #ffffff;
+            cursor: pointer;  
+          }
+        }
+      }
+    }
+  }
+}

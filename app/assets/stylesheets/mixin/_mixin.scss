@@ -1,0 +1,12 @@
+@mixin main-font {
+  color: #ffffff;
+  font-weight: bold;
+}
+@mixin user_btn {
+  height: 50px;
+  width: 100px;
+  line-height: 50px;
+  padding: 0 20px;
+  background-color: #afc0d1;
+  text-align: center;
+}
