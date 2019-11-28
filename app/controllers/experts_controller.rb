@@ -3,4 +3,8 @@ class ExpertsController < ApplicationController
   
   def index
   end
+
+  def new
+    @expert = Expert.new
+  end
 end

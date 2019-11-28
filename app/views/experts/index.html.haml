@@ -50,11 +50,11 @@
             10件    
   .member-board                
     .members
-      .member-plus__btn
+      = link_to new_expert_path, class: "member-plus__btn" do
         .plus__btn-message
           ＋　カードを追加する
       .member
-        = image_tag 'ques.jpg', class: "member__image"
+        = image_tag "ques.jpg", class: "member__image"
         .member__info
           .nickname
             nickname:神谷駿太
