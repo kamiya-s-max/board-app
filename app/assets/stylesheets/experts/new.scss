@@ -1,0 +1,94 @@
+.main-content {
+  min-height: calc(100vh - 90px);
+  width: 100%;
+  background-color: #b9c5d1;
+  float: left;
+  .main-container {
+    height: 100%;
+    width: 40%;
+    background-color: #ffffff;
+    margin: 30px auto;
+    .main-form__wrapper {
+      // height: 100%;
+      padding: 10px;
+      .form__title {
+        @include form_title;
+        text-align: center;
+        padding: 10px;
+      }
+      .new_expert {
+        padding: 0 20px;
+        .form__container {
+          margin-bottom: 10px;
+          .expert__label {
+            display: inline-block;
+            color: $head-font-color;
+          }
+          .form__require {
+            display: inline-block;
+            @include form_any-require__box;
+            background-color: $require-red;
+            color: #ffffff;
+          }
+          .form__any {
+            display: inline-block;
+            @include form_any-require__box;
+            background-color: $member-color;
+            color: #ffffff;
+          }
+          .expert__input-small {
+            width: 100%;
+            height: 30px;
+            margin-top: 5px;
+          }
+          .select__wrapper {
+            position: relative;
+            .expert__select {
+              width: 100%;
+              height: 30px;
+              margin-top: 5px;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              appearance: none;
+            }
+            .select-arrow {
+              position: absolute;
+              top: 10px;
+              right: 5px;
+              color: $member-color;
+            }
+          }
+          .expert__input-large {
+            width: 100%;
+            height: 100px;
+            margin-top: 5px;
+          }
+        }
+        .expert__btn {
+          height: 50px;
+          width: 100%;
+          line-height: 50px;
+          padding: 0 20px;
+          color: #ffffff;
+          cursor: pointer;
+        }
+        .submit {
+          background-color: $head-font-color;
+        }
+        .return__btn {
+          display: block;
+          margin: 5px auto;
+          height: 50px;
+          width: 100%;
+          line-height: 50px;
+          // padding: 0 20px;
+          color: #ffffff;
+          cursor: pointer;
+          text-align: center;
+          text-decoration: none;
+          background-color: $member-color;
+        }
+      }
+    }
+  }
+}

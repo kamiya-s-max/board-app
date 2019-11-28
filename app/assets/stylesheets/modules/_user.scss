@@ -12,14 +12,10 @@
       background-color: #ffffff;
       margin: 0 auto;
       .form__title {
-        // color: #ffffff71;
-        font-weight: bold;
-        color: #4c5765;
-        font-size: 30px;
+        @include form_title
       }
       .form {
         padding: 20px;
-        // font-size: 15px;
         text-align: center;
         color: $main-color;
         .label {
@@ -32,7 +28,6 @@
         }
       }
       .image__field {
-        // text-align: center;
         margin: 0 auto;
         width: 300px;
         cursor: pointer;

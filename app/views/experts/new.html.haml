@@ -1,0 +1,42 @@
+.header
+  .header__left-box
+    = link_to "/", class: "header__title" do
+      Board
+.main-content
+  .main-container
+    .main-form__wrapper
+      .form__title
+        Card Create
+      = form_for @expert, method: :post do |f|
+        .form__container
+          = f.label :name, "Specialty", class: "expert__label"
+          .form__require
+            必須
+          = f.text_field :name, class: "expert__input-small", placeholder: "得意分野の名前"
+        .form__container
+          = f.label :category, "Category", class: "expert__label"
+          .form__require
+            必須
+          .select__wrapper
+            = fa_icon "chevron-down", class: "select-arrow"
+            = f.select :category, {}, {}, {class: "expert__select"}
+        .form__container
+          = f.label :career, "Career", class: "expert__label"
+          .form__require
+            必須
+          .select__wrapper
+            = fa_icon "chevron-down", class: "select-arrow"
+            = f.select :career, {}, {}, {class: "expert__select"}
+        .form__container
+          = f.label :contact, "Contact", class: "expert__label"
+          .form__any
+            任意
+          = f.text_field :contact, class: "expert__input-small", placeholder: "希望連絡先"
+        .form__container
+          = f.label :text, "Introduction", class: "expert__label"
+          .form__any
+            任意
+          = f.text_area :text, class: "expert__input-large", placeholder: "自己紹介文　例）こんにちは！もし〇〇を始めたいという方がいましたら、ぜひご連絡をお願いします！"
+        = f.submit "create", class: "expert__btn submit"
+        =link_to "/", class: "return__btn" do
+          return
