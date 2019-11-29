@@ -1,3 +1,3 @@
 class Category < ApplicationRecord
-  has_many :experts
+  belongs_to :expert
 end
