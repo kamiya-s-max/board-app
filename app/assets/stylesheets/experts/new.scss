@@ -20,21 +20,24 @@
         padding: 0 20px;
         .form__container {
           margin-bottom: 10px;
-          .expert__label {
-            display: inline-block;
-            color: $head-font-color;
-          }
-          .form__require {
-            display: inline-block;
-            @include form_any-require__box;
-            background-color: $require-red;
-            color: #ffffff;
-          }
-          .form__any {
-            display: inline-block;
-            @include form_any-require__box;
-            background-color: $member-color;
-            color: #ffffff;
+          .upper__message {
+            display: flex;
+            .expert__label {
+              // display: inline-block;
+              color: $head-font-color;
+            }
+            .form__require {
+              // display: inline-block;
+              @include form_any-require__box;
+              background-color: $require-red;
+              color: #ffffff;
+            }
+            .form__any {
+              // display: inline-block;
+              @include form_any-require__box;
+              background-color: $member-color;
+              color: #ffffff;
+            }
           }
           .expert__input-small {
             width: 100%;
