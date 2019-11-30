@@ -16,6 +16,8 @@
   font-size: 30px;
 }
 @mixin form_any-require__box {
+  width: 30px;
+  text-align: center;
   font-size: 12px;
   margin: 0 0 0 8px;
   padding: 2px 4px;
