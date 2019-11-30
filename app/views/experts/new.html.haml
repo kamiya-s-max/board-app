@@ -9,34 +9,42 @@
         Card Create
       = form_for @expert, method: :post do |f|
         .form__container
-          = f.label :name, "Specialty", class: "expert__label"
-          .form__require
-            必須
-          = f.text_field :name, class: "expert__input-small", placeholder: "得意分野の名前"
-        = f.fields_for :category, method: :post do |category|
-          .form__container
-            = category.label :name, "Category", class: "expert__label"
+          .upper__message
+            = f.label :name, "Specialty", class: "expert__label"
             .form__require
               必須
+          = f.text_field :name, class: "expert__input-small", placeholder: "得意分野の名前"
+          = render partial: 'modules/expert_error_message', locals: {expert: @expert, column: "name"}
+        = f.fields_for :category, method: :post do |category|
+          .form__container
+            .upper__message
+              = category.label :name, "Category", class: "expert__label"
+              .form__require
+                必須
             .select__wrapper
               = fa_icon "chevron-down", class: "select-arrow"
               = category.select :name, [["カテゴリを選んでください",nil],["ビジネス","ビジネス"],["スポーツ","スポーツ"],["アウトドア趣味(スポーツ以外)","アウトドア趣味(スポーツ以外)"],["ゲーム","ゲーム"],["インドア趣味(ゲーム以外)","インドア趣味(ゲーム以外)"]], {}, {class: "expert__select"}
+              = render partial: 'modules/expert_error_message', locals: {expert: @expert.category, column: "name"}
         .form__container
-          = f.label :career, "Career", class: "expert__label"
-          .form__require
-            必須
+          .upper__message
+            = f.label :career, "Career", class: "expert__label"
+            .form__require
+              必須
           .select__wrapper
             = fa_icon "chevron-down", class: "select-arrow"
             = f.select :career, [["経験を選んでください",nil],["1ヶ月未満","1ヶ月未満"],["1~6ヶ月","1~6ヶ月"],["7~11ヶ月","7~11ヶ月"],["1~2年","1~2年"],["3~4年","3~4年"],["5年以上","5年以上"]], {}, {class: "expert__select"}
+            = render partial: 'modules/expert_error_message', locals: {expert: @expert, column: "career"}
         .form__container
-          = f.label :contact, "Contact", class: "expert__label"
-          .form__any
-            任意
+          .upper__message
+            = f.label :contact, "Contact", class: "expert__label"
+            .form__any
+              任意
           = f.text_field :contact, class: "expert__input-small", placeholder: "希望連絡先"
         .form__container
-          = f.label :text, "Introduction", class: "expert__label"
-          .form__any
-            任意
+          .upper__message
+            = f.label :text, "Introduction", class: "expert__label"
+            .form__any
+              任意
           = f.text_area :text, class: "expert__input-large", placeholder: "自己紹介文　例）こんにちは！もし〇〇を始めたいという方がいましたら、ぜひご連絡をお願いします！"
         = f.submit "create", class: "expert__btn submit"
         =link_to "/", class: "return__btn" do

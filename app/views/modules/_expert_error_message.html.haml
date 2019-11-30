@@ -1,0 +1,6 @@
+- if expert.errors.any?
+  - unless expert.valid?
+    - if errors = expert.errors.full_messages_for(column.to_sym)
+      %ur
+        - errors.each do |error|
+          %li.error=error
