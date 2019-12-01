@@ -3,8 +3,7 @@ class ExpertsController < ApplicationController
   before_action :set_category, only: :index
 
   def index
-    @experts = @category.experts.includes(:user)
-    # .page(params[:page]).per(12).order("created_at ASC")
+    @experts = @category.experts.includes(:user).page(params[:page]).per(12).order("created_at ASC")
   end
 
   def new
