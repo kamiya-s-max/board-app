@@ -1,0 +1,15 @@
+.member
+  - if expert.user.avatar
+    = image_tag expert.user.avatar, class: "member__image"
+  - else
+    = image_tag "ques.jpg", class: "member__image"
+  .member__info
+    .nickname
+      nickname:
+      = expert.user.nickname
+    .expert
+      expert:
+      = expert.name
+    .career
+      career:
+      = expert.career

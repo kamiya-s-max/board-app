@@ -14,18 +14,18 @@
       @include main-font;
     }
     .content {
+      float: left;
       width: 250px;
       background-color: #afc0d1;
       height: 50px;
       margin: 25px 0;
       padding: 10px;
-      &__wrapper {
-        .content__name {
-          @include main_font;
-        }
-        .content__number {
-          @include main_font;
-        }
+      text-decoration: none;
+      &__name {
+        @include main_font;
+      }
+      &__number {
+        @include main_font;
       }
     }
   }
