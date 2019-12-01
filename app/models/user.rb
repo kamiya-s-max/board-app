@@ -20,5 +20,4 @@ class User < ApplicationRecord
   validates :password, confirmation: true, presence: true, length: { in: 7..128 }, format: { with: VALID_PASSWORD_REGEX, message: "半角の英字と数字を両方含むパスワードを設定してください"}, unless: -> { validation_context == :update }
   # password_confirmation 空ではないか、7文字以上128文字以下、半角英数字両方含んでいるか
   validates :password_confirmation, presence: true, unless: -> { validation_context == :update }
-
 end
