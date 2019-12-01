@@ -1,93 +1,47 @@
 .wrapper
-  .header
-    .header__left-box
-      .header__title
-        Board
-    .header__right-box
-      - if user_signed_in?
-        =link_to destroy_user_session_path, class: "sign-out__btn", method: :delete do
-          Sign Out
-        =link_to edit_user_path(current_user), class: "edit__btn" do
-          Edit
-      - else
-        =link_to new_user_session_path, class: "sign-in__btn" do
-          Log In
-        =link_to new_user_registration_path, class: "sign-up__btn" do
-          Sign Up
-  .side_bar
-    .contents
-      .contents__title
-        カテゴリ一覧
-      .content
-        .content__wrapper
-          .content__name
-            ビジネス
-          .content__number
-            10件
-      .content
-        .content__wrapper
-          .content__name
-            スポーツ
-          .content__number
-            10件
-      .content
-        .content__wrapper
-          .content__name
-            ゲーム
-          .content__number
-            10件 
-      .content
-        .content__wrapper
-          .content__name
-            アウトドア趣味
-          .content__number
-            10件  
-      .content
-        .content__wrapper
-          .content__name
-            インドア趣味
-          .content__number
-            10件    
+  = render "shared/header"
+  = render "shared/side_bar"    
   .member-board                
     .members
       = link_to new_expert_path, class: "member-plus__btn" do
         .plus__btn-message
           ＋　カードを追加する
-      .member
-        = image_tag "ques.jpg", class: "member__image"
-        .member__info
-          .nickname
-            nickname:神谷駿太
-          .expert
-            expert:フライトコンバット
-          .career
-            career:２年
-      .member
-        = image_tag current_user.avatar, class: "member__image"
-        .member__info
-          .nickname
-            nickname:神谷駿太
-          .expert
-            expert:フライトコンバット
-          .career
-            career:２年
-      .member
-        .member__image
-          画像
-        .member__info
-          .nickname
-            nickname:神谷駿太
-          .expert
-            expert:フライトコンバット
-          .career
-            career:２年
-      .member
-        .member__image
-          画像
-        .member__info
-          .nickname
-            nickname:神谷駿太
-          .expert
-            expert:フライトコンバット
-          .career
-            career:２年
+      = render partial: "expert", collection: @experts
+      -# .member
+      -#   = image_tag "ques.jpg", class: "member__image"
+      -#   .member__info
+      -#     .nickname
+      -#       nickname:神谷駿太
+      -#     .expert
+      -#       expert:フライトコンバット
+      -#     .career
+      -#       career:２年
+      -# .member
+      -#   = image_tag current_user.avatar, class: "member__image"
+      -#   .member__info
+      -#     .nickname
+      -#       nickname:神谷駿太
+      -#     .expert
+      -#       expert:フライトコンバット
+      -#     .career
+      -#       career:２年
+      -# .member
+      -#   .member__image
+      -#     画像
+      -#   .member__info
+      -#     .nickname
+      -#       nickname:神谷駿太
+      -#     .expert
+      -#       expert:フライトコンバット
+      -#     .career
+      -#       career:２年
+      -# .member
+      -#   .member__image
+      -#     画像
+      -#   .member__info
+      -#     .nickname
+      -#       nickname:神谷駿太
+      -#     .expert
+      -#       expert:フライトコンバット
+      -#     .career
+      -#       career:２年
