@@ -2,7 +2,7 @@ class ExpertsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_category
   def index
-    
+
     @experts = @category.experts.includes(:user)
     # .page(params[:page]).per(12).order("created_at ASC")
   end
