@@ -6,7 +6,6 @@ class ExpertsController < ApplicationController
 
   def new
     @expert = Expert.new
-    @expert.build_category
   end
 
   def create
@@ -25,6 +24,6 @@ class ExpertsController < ApplicationController
                                    :career,
                                    :contact,
                                    :text,
-                                   category_attributes: [:id, :name]).merge(user_id: current_user.id)
+                                   :category_id).merge(user_id: current_user.id)
   end
 end
