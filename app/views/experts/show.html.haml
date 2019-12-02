@@ -2,37 +2,34 @@
 .main-content
   .expert-main-container
     .main-container__wrapper
-      = image_tag "ques.jpg", class: "card__image"
+      - if @expert.user.avatar
+        = image_tag @expert.user.avatar, class: "card__image"
+      - else
+        = image_tag "ques.jpg", class: "card__image"
       .card__right-message__container
         .member-infomation__content
           .member__head-title
             Nickname
           .member__body-message
-            kamiya-s-max
+            = @expert.user.nickname
         .member-infomation__content
           .member__head-title
             Contact
           .member__body-message
-            kamiya123@gmail.com
+            = @expert.contact
       .card__bottom-message__container
         .member-infomation
           .member-infomation__content
             .member__head-title
               Specialty
             .member__body-message
-              サバゲー
+              = @expert.name
           .member-infomation__content
             .member__head-title
               Career
             .member__body-message
-              １ヶ月未満
+              = @expert.career
         .member-introduction__content
-          よろしくお願いします。あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-        =link_to "/", class: "expert-return__btn" do
+          = @expert.text
+        =link_to "/categories/#{@category.id}/experts", class: "expert-return__btn" do
           return
-
-      -# - if expert.user.avatar
-      -#   = image_tag expert.user.avatar, class: "member__image"
-      -# - else
-      -#   = image_tag "ques.jpg", class: "member__image"
-      
