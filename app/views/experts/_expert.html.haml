@@ -1,4 +1,4 @@
-.member
+= link_to "/categories/#{@category.id}/experts/#{expert.id}", class: "member" do
   - if expert.user.avatar
     = image_tag expert.user.avatar, class: "member__image"
   - else

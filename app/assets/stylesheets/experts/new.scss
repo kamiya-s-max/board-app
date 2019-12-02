@@ -80,17 +80,7 @@
           background-color: $head-font-color;
         }
         .return__btn {
-          display: block;
-          margin: 5px auto;
-          height: 50px;
-          width: 100%;
-          line-height: 50px;
-          // padding: 0 20px;
-          color: #ffffff;
-          cursor: pointer;
-          text-align: center;
-          text-decoration: none;
-          background-color: $member-color;
+          @include btn;
         }
       }
     }

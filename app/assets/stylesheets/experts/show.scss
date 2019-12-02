@@ -1,0 +1,59 @@
+.expert-main-container {
+  height: 100%;
+  width: 50%;
+  background-color: #ffffff;
+  margin: 30px auto;
+  .main-container__wrapper {
+    padding: 20px;
+    .card__image {
+      height: 200px;
+      width: 290px;
+    }
+    .card__right-message__container {
+      float: right;
+      margin: 20px;
+      .member-infomation__content {
+        margin-bottom: 20px;
+        .member__head-title {
+          width: 100px;
+          color: $member-color;
+          border-bottom: 1px solid
+        }
+        .member__body-message {
+          color: $head-font-color;
+          font-weight: bold;
+          font-size: 20px;
+        }
+      }
+    }
+    .card__bottom-message__container {
+      .member-infomation {
+        display: flex;
+        &__content {
+          margin-top: 20px;
+          // width: 100px;
+          .member__head-title {
+            width: 100px;
+            color: $member-color;
+            border-bottom: 1px solid;
+            margin: 20px 20px 0 20px;
+          }
+          .member__body-message {
+            color: $head-font-color;
+            font-weight: bold;
+            font-size: 20px;
+            margin: 0 20px 20px 20px;
+          }
+        }
+      }
+      .member-introduction__content {
+        color: $head-font-color;
+        border: 1px solid;
+        min-height: 150px;
+      }
+      .expert-return__btn {
+        @include btn;
+      }
+    }
+  }
+}
