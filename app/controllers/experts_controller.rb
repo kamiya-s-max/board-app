@@ -1,9 +1,13 @@
 class ExpertsController < ApplicationController
-  before_action :authenticate_user!
-  before_action :set_category, only: :index
+  before_action :authenticate_user!, except: :index
+  before_action :set_category, only: [:index, :show]
 
   def index
     @experts = @category.experts.includes(:user).page(params[:page]).per(12).order("created_at ASC")
+  end
+
+  def show
+    @expert = Expert.find(params[:id])
   end
 
   def new
