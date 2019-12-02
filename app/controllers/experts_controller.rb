@@ -6,6 +6,9 @@ class ExpertsController < ApplicationController
     @experts = @category.experts.includes(:user).page(params[:page]).per(12).order("created_at ASC")
   end
 
+  def show
+  end
+
   def new
     @expert = Expert.new
   end
