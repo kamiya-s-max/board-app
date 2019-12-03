@@ -2,7 +2,7 @@
 .main-content
   .expert-main-container
     .main-container__wrapper
-      - if @expert.user.avatar
+      - if @expert.user.avatar.attached?
         = image_tag @expert.user.avatar, class: "card__image"
       - else
         = image_tag "ques.jpg", class: "card__image"
