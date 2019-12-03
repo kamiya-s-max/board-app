@@ -1,6 +1,6 @@
 .header
   .header__left-box
-    .header__title
+    = link_to root_path, class: "header__title" do
       Board
   .header__right-box
     - if user_signed_in?
