@@ -1,5 +1,5 @@
 = link_to "/categories/#{@category.id}/experts/#{expert.id}", class: "member" do
-  - if expert.user.avatar
+  - if expert.user.avatar.attached?
     = image_tag expert.user.avatar, class: "member__image"
   - else
     = image_tag "ques.jpg", class: "member__image"
