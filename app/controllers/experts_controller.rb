@@ -1,13 +1,26 @@
 class ExpertsController < ApplicationController
   before_action :authenticate_user!, except: :index
   before_action :set_category, only: [:index, :show]
+  before_action :find_expert, only: [:show, :edit, :update]
 
   def index
     @experts = @category.experts.includes(:user).page(params[:page]).per(12).order("created_at ASC")
   end
 
   def show
-    @expert = Expert.find(params[:id])
+  end
+
+  def edit
+  end
+
+  def update
+    if @expert.user_id == current_user.id
+      if @expert.update(expert_params)
+        redirect_to "/categories/#{@expert.category_id}/experts", notice: "card update successfully."
+      else
+        render :edit
+      end
+    end
   end
 
   def new
@@ -17,9 +30,9 @@ class ExpertsController < ApplicationController
   def create
     @expert = Expert.new(expert_params)
     if @expert.save
-      redirect_to root_path
+      redirect_to "/categories/#{@expert.category_id}/experts", notice: "card create successfully."
     else
-      render "/experts/new"
+      render :new
     end
   end
 
@@ -35,5 +48,9 @@ class ExpertsController < ApplicationController
 
   def set_category
     @category = Category.find(params[:category_id])
+  end
+
+  def find_expert
+    @expert = Expert.find(params[:id])
   end
 end

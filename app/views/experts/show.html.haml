@@ -29,6 +29,12 @@
               Career
             .member__body-message
               = @expert.career
+        - if @expert.user_id == current_user.id
+          .member_btn__wrapper
+            = link_to edit_category_expert_path, class: "member_private__btn edit" do
+              Edit
+            = link_to "", class: "member_private__btn delete" do
+              Delete
         .member-introduction__content
           = @expert.text
         =link_to "/categories/#{@category.id}/experts", class: "expert-return__btn" do
