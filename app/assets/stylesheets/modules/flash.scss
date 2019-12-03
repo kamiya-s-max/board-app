@@ -1,0 +1,19 @@
+// .error-container {
+//   background-color: $require-red;
+//   color: white;
+//   font-weight: bold;
+//   text-align: center;
+// }
+.notification {
+  .notice {
+    background-color: $success-green;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .alert {
+    background-color: $require-red;
+    color: #ffffff;
+    text-align: center;
+  }
+}

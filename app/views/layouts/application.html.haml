@@ -8,7 +8,10 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    .error-container
-      - if flash.alert.present?
-        .alert.alert-success= flash.alert
+    -# .error-container
+    -#   - if flash.alert.present?
+    -#     .alert.alert-success= flash.alert
+    .notification
+      - flash.each do |key, value|
+        = content_tag :div, value, class: key
     = yield
