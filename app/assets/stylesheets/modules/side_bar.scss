@@ -1,0 +1,35 @@
+.side_bar {
+  height: calc(100vh - 115px);
+  width: 260px;
+  background-color: $main-color;
+  padding: 20px 20px 0 20px;
+  overflow: scroll;
+  float: left;
+  .contents {
+    // height: 100%;
+    float: left;
+    &__title {
+      height: 30px;
+      font-size: 20px;
+      @include main-font;
+      margin-bottom: 20px;
+    }
+    .content {
+      float: left;
+      width: 250px;
+      background-color: #afc0d1;
+      height: 50px;
+      padding: 10px;
+      text-decoration: none;
+      border: 1px solid;
+      color: $main-color;
+      &__name {
+        @include main_font;
+        line-height: 50px;
+      }
+      &__number {
+        @include main_font;
+      }
+    }
+  }
+}

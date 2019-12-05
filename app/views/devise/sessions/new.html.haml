@@ -1,0 +1,25 @@
+#account-page.account-page
+  = render "shared/header"
+  .account-page__inner
+    .form_box
+      .form.form__title
+        Log In
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        .form
+          = f.label :email, class: "label"
+          %br/
+          = f.email_field :email, autofocus: true, autocomplete: "email", class: "field"
+        .form
+          = f.label :password, class: "label"
+          %br/
+          = f.password_field :password, autocomplete: "current-password", class: "field"
+        - if devise_mapping.rememberable?
+          .form
+            = f.check_box :remember_me
+            = f.label :remember_me
+        .submit
+          .actions
+            = f.submit "Log In", class: "submit__btn"
+        .form.less_link_box
+          %strong まだアカウントを持っていませんか？
+          = render "devise/shared/links"

@@ -1,0 +1,15 @@
+.header
+  .header__left-box
+    = link_to root_path, class: "header__title" do
+      Board
+  .header__right-box
+    - if user_signed_in?
+      =link_to destroy_user_session_path, class: "sign-out__btn", method: :delete do
+        Sign Out
+      =link_to edit_user_path(current_user), class: "edit__btn" do
+        Edit
+    - else
+      =link_to new_user_session_path, class: "sign-in__btn" do
+        Log In
+      =link_to new_user_registration_path, class: "sign-up__btn" do
+        Sign Up

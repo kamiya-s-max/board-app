@@ -1,0 +1,15 @@
+= link_to "/categories/#{@category.id}/experts/#{expert.id}", class: "member" do
+  - if expert.user.avatar.attached?
+    = image_tag expert.user.avatar, class: "member__image"
+  - else
+    = image_tag "ques.jpg", class: "member__image"
+  .member__info
+    .nickname
+      nickname:
+      = expert.user.nickname
+    .expert
+      expert:
+      = expert.name
+    .career
+      career:
+      = expert.career
