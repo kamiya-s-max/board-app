@@ -1,0 +1,38 @@
+@mixin main-font {
+  color: #ffffff;
+  font-weight: bold;
+}
+@mixin user_btn {
+  height: 50px;
+  width: 100px;
+  line-height: 50px;
+  padding: 0 20px;
+  background-color: #afc0d1;
+  text-align: center;
+}
+@mixin form_title {
+  font-weight: bold;
+  color: #4c5765;
+  font-size: 30px;
+}
+@mixin form_any-require__box {
+  width: 30px;
+  text-align: center;
+  font-size: 12px;
+  margin: 0 0 0 8px;
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+@mixin btn {
+  display: block;
+  margin: 5px auto;
+  height: 50px;
+  width: 100%;
+  line-height: 50px;
+  color: #ffffff;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  background-color: $member-color;
+}

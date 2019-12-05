@@ -1,0 +1,22 @@
+#account-page.account-page
+  = render "shared/header"
+  .account-page__inner
+    .form_box
+      .form.form__title
+        Edit
+      = form_for(current_user) do |f|
+        .form
+          = f.label :email, class: "label"
+          %br/
+          = f.email_field :email, autofocus: true, placeholder: 'メールアドレスを入力', class: "field"
+          = render partial: 'modules/user_error_message', locals: {user: @user, column: "email"}
+        .form
+          = f.label :nickname, class: "label"
+          %br/
+          = f.text_field :nickname, placeholder: 'ニックネームを入力(必須)', class: "field"
+          = render partial: 'modules/user_error_message', locals: {user: @user, column: "nickname"}
+        -# .image__field
+        -#   = f.file_field :avatar, class: "image__field"
+        .submit
+          .actions
+            = f.submit class: "submit__btn"

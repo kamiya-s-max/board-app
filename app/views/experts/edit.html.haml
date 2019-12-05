@@ -1,0 +1,8 @@
+= render "shared/header"
+.main-content
+  .main-container
+    .main-form__wrapper
+      .form__title
+        Card Edit
+      = form_for @expert, url: category_expert_path, method: :patch do |f|
+        = render "expert__form", f: f

@@ -1,0 +1,8 @@
+= render "shared/header"
+.main-content
+  .main-container
+    .main-form__wrapper
+      .form__title
+        Card Create
+      = form_for @expert, method: :post do |f|
+        = render "expert__form", f: f
