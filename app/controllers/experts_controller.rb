@@ -30,7 +30,7 @@ class ExpertsController < ApplicationController
   def create
     @expert = Expert.new(expert_params)
     if @expert.save
-      redirect_to "/categories/#{@expert.category_id}/experts", notice: "card create successfully."
+      redirect_to category_experts_path(@expert.category_id), notice: "card create successfully."
     else
       render :new
     end
