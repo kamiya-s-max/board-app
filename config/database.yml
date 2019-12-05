@@ -82,6 +82,6 @@ test:
 #
 production:
   <<: *default
-  database: board-app_production
-  username: board-app
-  password: <%= ENV['BOARD-APP_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
