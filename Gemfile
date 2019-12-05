@@ -70,3 +70,4 @@ gem 'haml-rails'
 gem 'devise'
 gem 'font-awesome-rails'
 gem 'kaminari'
+gem "aws-sdk-s3", require: false
