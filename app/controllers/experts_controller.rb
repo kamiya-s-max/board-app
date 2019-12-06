@@ -1,7 +1,7 @@
 class ExpertsController < ApplicationController
   before_action :authenticate_user!, except: :index
-  before_action :set_category, only: [:index, :show]
-  before_action :find_expert, only: [:show, :edit, :update]
+  before_action :set_category, only: [:index, :show, :destroy]
+  before_action :find_expert, only: [:show, :edit, :update, :destroy]
 
   def index
     @experts = @category.experts.includes(:user).page(params[:page]).per(12).order("created_at ASC")
@@ -33,6 +33,15 @@ class ExpertsController < ApplicationController
       redirect_to category_experts_path(@expert.category_id), notice: "card create successfully."
     else
       render :new
+    end
+  end
+
+  def destroy
+    if @expert.user_id == current_user.id
+      @expert.destroy
+      redirect_to root_path, notice: "card delete successfully."
+    else
+      render :show
     end
   end
 
