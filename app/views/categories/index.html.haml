@@ -1,6 +1,21 @@
 .wrapper
   = render "shared/header"
-  = render "shared/side_bar"
-  .member-board                
-    .members
-      = render "modules/new-btn_icon"
+  -# = render "shared/side_bar"
+  .category-board                
+    .categories
+      = link_to "/categories/1/experts", class: "category" do
+        .category__name
+          ビジネス
+      = link_to "/categories/2/experts", class: "category" do
+        .category__name
+          スポーツ
+      = link_to "/categories/3/experts", class: "category" do
+        .category__name
+          アウトドア趣味(スポーツ以外)
+      = link_to "/categories/4/experts", class: "category" do
+        .category__name
+          ゲーム
+      = link_to "/categories/5/experts", class: "category" do
+        .category__name
+          インドア趣味(ゲーム以外)
+      -# = render "modules/new-btn_icon"
