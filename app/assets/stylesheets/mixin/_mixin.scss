@@ -7,8 +7,9 @@
   width: 100px;
   line-height: 50px;
   padding: 0 20px;
-  background-color: #afc0d1;
+  background-color: $member-color;
   text-align: center;
+  border-radius: 10px;
 }
 @mixin form_title {
   font-weight: bold;

@@ -1,6 +1,6 @@
 .member-board {
-  width: calc(100vw - 300px);
-  height: calc(100vh - 115px);
+  width: calc(100vw - 260px);
+  // height: calc(100vh - 115px);
   background-color: #ffffff;
   // background-color: $main-color;
   float: left;
@@ -10,19 +10,6 @@
     display: flex;
     flex-wrap: wrap;
     overflow: scroll;
-    .member-plus__btn {
-      height: 290px;
-      width: 290px;
-      border: solid 2px $main-color;
-      margin: 0 30px 30px 0;
-      padding: 10px;
-      text-decoration: none;
-      .plus__btn-message {
-        color: $member-color;
-        text-align: center;
-        line-height: 290px;
-      }
-    }
     .member {
       height: 290px;
       width: 290px;
@@ -44,6 +31,28 @@
         .career {
           color: $member-color;
         }
+      }
+    }
+    .member-plus__btn {
+      position: fixed;
+      height: 120px;
+      width: 120px;
+      border: solid 2px $member-color;
+      margin: 0 30px 30px 0;
+      padding: 10px;
+      text-decoration: none;
+      bottom: 50px;
+      right: 50px;
+      border-radius: 20px;
+      background-color: $member-color;
+      .plus__btn-icon {
+        // float: left;
+        display: block;
+        line-height: 120px;
+        height: 120px;
+        width: 120px;          
+        text-align: center;
+        color: white;
       }
     }
   }

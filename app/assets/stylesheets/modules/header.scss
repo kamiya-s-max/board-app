@@ -1,25 +1,20 @@
 .header {
-  // height: 100px;
   float: left;
   width: calc(100% - 40px);
-  // background-color: #9ba5af;
-  background-color: #4c5765;
-  // position: fixed;
+  background-color: #232A34;
+  // background-color: #4c5765;
   padding: 20px;
   border-bottom: solid 5px #354150e3;
   &__left-box {
     float: left;
-    // padding: 0 20px;
     .header__title {
       font-size: 30px;
       text-decoration: none;
       @include main-font;
-      // line-height: 100px;
     }
   }
   &__right-box {
     float: right;
-    // margin-right: 40px;
     padding-right: 20px;
     display: flex;
     align-items: center;
@@ -27,7 +22,6 @@
     .sign-in__btn {
       @include user_btn;
       @include main-font;
-      // margin-left: 20px;
       text-decoration: none;
     }
     .sign-out__btn {
